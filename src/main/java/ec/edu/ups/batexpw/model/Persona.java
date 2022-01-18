@@ -1,17 +1,38 @@
 package ec.edu.ups.batexpw.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Persona {
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="tbl_persona")
+public class Persona implements Serializable {
+	@Id
+	@Column(name = "per_id")
 	private int id;
+	@Column(name = "per_cedula")
 	private String cedula;
+	@Column(name = "per_nombre")
 	private String nombre;
+	@Column(name = "per_apellido")
 	private String apellido;
+	@Column(name = "per_direccion")
 	private String direccion;
+	@Column(name = "per_telefono")
 	private String telefono;
+	@Column(name = "per_email")
 	private String email;
+	@Column(name = "per_fechaN")
 	private Date fechaN;
+	@Column(name = "per_genero")
 	private String genero;
+	@Column(name = "per_password")
+	private String password;
+	
 	
 	public int getId() {
 		return id;
@@ -67,11 +88,19 @@ public class Persona {
 	public void setGenero(String genero) {
 		this.genero = genero;
 	}
+	
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
 	@Override
 	public String toString() {
-		return "RolPersona [id=" + id + ", cedula=" + cedula + ", nombre=" + nombre + ", apellido=" + apellido
+		return "Persona [id=" + id + ", cedula=" + cedula + ", nombre=" + nombre + ", apellido=" + apellido
 				+ ", direccion=" + direccion + ", telefono=" + telefono + ", email=" + email + ", fechaN=" + fechaN
-				+ ", genero=" + genero + "]";
+				+ ", genero=" + genero + ", password=" + password + "]";
 	}
+	
 	
 }
