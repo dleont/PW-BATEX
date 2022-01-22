@@ -33,6 +33,18 @@ public class Persona implements Serializable {
 	@Column(name = "per_password")
 	private String password;
 	
+	private String  rolpersona;
+	
+	
+	
+	
+	public String getRolpersona() {
+		return rolpersona;
+	}
+	public void setRolpersona(String rolpersona) {
+		this.rolpersona = rolpersona;
+	}
+	
 	
 	public int getId() {
 		return id;
