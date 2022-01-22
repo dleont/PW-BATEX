@@ -15,6 +15,7 @@ public class PersonaOn {
 	
 	public void insertar(Persona p) {
 		personaDao.insertar(p);
+		//cuando se revisa la parte de insertar una persona 
 	}
 	public List<Persona> getPersonas(){
 		return personaDao.getList();
